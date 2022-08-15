@@ -87,6 +87,35 @@ USE sql_store;
 -- WHERE shipped_date IS NULL
 
 
+-- ORDER ITEMS
+-- SELECT *
+-- FROM customers
+-- ORDER BY state -- order by state
+-- ORDER BY first_name, last_name -- order by these two
+-- ORDER BY first_name DESC -- order by first_name by descending order
+
+-- EXERCISE
+-- SELECT *, unit_price * quantity AS Total
+-- FROM order_items 
+-- WHERE order_id = 2
+-- ORDER BY Total DESC
+
+-- THE LIMIT CLAUSE
+-- SELECT *
+-- FROM customers
+-- LIMIT 3 -- Select only the first three items
+-- LIMIT 6, 3 -- Select range 7-9
+-- LIMIT 3, 3 -- Select range 4-6
+
+-- EXERCISE
+-- SELECT THE THREE LOYAL CUSTOMERS
+-- SELECT * 
+-- FROM CUSTOMERS
+-- ORDER BY points DESC
+-- LIMIT 3
+
+
+
 
 
 
