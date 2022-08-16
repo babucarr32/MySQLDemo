@@ -1,4 +1,4 @@
-USE world;
+-- USE world;
 
 -- --------COUNTING THE NUMBER OF VALUES
 -- SELECT count(*)
@@ -38,8 +38,17 @@ USE world;
 -- ORDER BY Population
 -- LIMIT 50
 
-
-
+USE sql_store;
+SELECT c.first_name,
+		c.last_name,
+        c.address,
+        p.name AS products,
+        oi.quantity
+FROM customers c
+JOIN order_items oi
+	ON oi.order_id = c.customer_id
+JOIN products p
+	ON p.product_id = oi.product_id
 
 
 

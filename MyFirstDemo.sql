@@ -161,11 +161,11 @@
 -- JOIN order_statuses os ON o.status = os.order_status_id
 
 -- EXERCISE
-USE sql_invoicing;
-SELECT clients.name, clients.address, payments.date, payment_methods.name AS payment_method
-FROM payments
-JOIN clients ON  payments.client_id = clients.client_id
-JOIN payment_methods ON payments.payment_method = payment_methods.payment_method_id
+-- USE sql_invoicing;
+-- SELECT clients.name, clients.address, payments.date, payment_methods.name AS payment_method
+-- FROM payments
+-- JOIN clients ON  payments.client_id = clients.client_id
+-- JOIN payment_methods ON payments.payment_method = payment_methods.payment_method_id
 
 
 
