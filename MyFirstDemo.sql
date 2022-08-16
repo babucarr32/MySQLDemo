@@ -1,4 +1,4 @@
-USE sql_store;
+-- USE sql_store;
 
 -- SELECT *
 -- FROM CUSTOMERS
@@ -129,13 +129,29 @@ USE sql_store;
 -- JOIN customers c ON o.customer_id = c.customer_id
 
 -- EXERCISE
-SELECT p.product_id, name, quantity, p.unit_price
-FROM order_items o
-JOIN products p ON p.product_id = o.product_id
+-- SELECT o.order_id, p.product_id, quantity, o.unit_price
+-- FROM order_items o
+-- JOIN products p ON p.product_id = o.product_id
 
+-- -------------------------------------- CROSS DATABASE JOIN -------------------------------------
+-- USE sql_inventory;
 
+-- SELECT * 
+-- FROM sql_store.order_items oi
+-- JOIN products p ON oi.product_id = p.product_id
 
+-- -------------------------------------- SELF JOIN -------------------------------------
+-- USE sql_hr;
 
+-- SELECT *
+-- FROM employees e
+-- JOIN employees m ON e.reports_to = m.employee_id
+
+USE sql_hr;
+
+SELECT e.employee_id, e.first_name, m.first_name AS manager
+FROM employees e
+JOIN employees m ON e.reports_to = m.employee_id
 
 
 
