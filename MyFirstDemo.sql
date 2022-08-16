@@ -114,6 +114,31 @@ USE sql_store;
 -- ORDER BY points DESC
 -- LIMIT 3
 
+-- -------------------------------------- MULTIPLE TABLES INNER JOIN -------------------------------------
+-- SELECT * 
+-- FROM orders
+-- JOIN customers ON orders.customer_id = customers.customer_id
+
+-- SELECT order_id, first_name,  last_name, orders.customer_id
+-- FROM orders
+-- JOIN customers ON orders.customer_id = customers.customer_id
+
+-- ------- USING ALIAS
+-- SELECT order_id, first_name,  last_name, o.customer_id
+-- FROM orders o
+-- JOIN customers c ON o.customer_id = c.customer_id
+
+-- EXERCISE
+SELECT p.product_id, name, quantity, p.unit_price
+FROM order_items o
+JOIN products p ON p.product_id = o.product_id
+
+
+
+
+
+
+
 
 
 
