@@ -147,16 +147,25 @@
 -- FROM employees e
 -- JOIN employees m ON e.reports_to = m.employee_id
 
-USE sql_hr;
+-- USE sql_hr;
 
-SELECT e.employee_id, e.first_name, m.first_name AS manager
-FROM employees e
-JOIN employees m ON e.reports_to = m.employee_id
+-- SELECT e.employee_id, e.first_name, m.first_name AS manager
+-- FROM employees e
+-- JOIN employees m ON e.reports_to = m.employee_id
 
+-- -------------------------------------- JOINING MULTIPLE TABLES -------------------------------------
+-- USE sql_store;
+-- SELECT o.order_id, c.first_name, c.last_name, os.name AS status
+-- FROM orders o
+-- JOIN customers c ON o.customer_id = c.customer_id
+-- JOIN order_statuses os ON o.status = os.order_status_id
 
-
-
-
+-- EXERCISE
+USE sql_invoicing;
+SELECT *
+FROM payments
+JOIN clients ON  payments.client_id = clients.client_id
+JOIN payment_methods ON payments.payment_method = payment_methods.payment_method_id
 
 
 
