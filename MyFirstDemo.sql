@@ -167,6 +167,37 @@
 -- JOIN clients ON  payments.client_id = clients.client_id
 -- JOIN payment_methods ON payments.payment_method = payment_methods.payment_method_id
 
+-- -------------------------------------- OUTER JOINS -------------------------------------
+-- USE sql_store;
+-- SELECT c.customer_id,
+-- 	c.first_name,
+--     o.order_id
+-- FROM orders o
+-- RIGHT JOIN customers c ON c.customer_id = o.customer_id
+-- ORDER BY c.customer_id
+
+-- EXERCISE
+-- SELECT p.product_id, p.name, oi.quantity
+-- FROM products p
+-- LEFT JOIN order_items oi ON p.product_id = oi.product_id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
