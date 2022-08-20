@@ -181,13 +181,53 @@
 -- FROM products p
 -- LEFT JOIN order_items oi ON p.product_id = oi.product_id
 
-USE store;
-SELECT c.first_name, c.last_name, o.order_date, p.name,  oi.quantity
-FROM customers c
-JOIN orders o ON c.customer_id = o.customer_id
-JOIN order_items oi ON oi.order_id = o.order_id
-JOIN products p ON p.product_id = oi.product_id
-ORDER BY c.first_name
+-- USE store;
+-- SELECT c.first_name, c.last_name, o.order_date, p.name,  oi.quantity
+-- FROM customers c
+-- JOIN orders o ON c.customer_id = o.customer_id
+-- JOIN order_items oi ON oi.order_id = o.order_id
+-- JOIN products p ON p.product_id = oi.product_id
+-- ORDER BY c.first_name
+
+
+-- -----------INSERT
+-- USE world;
+-- -- INSERT INTO country--  (code, Name, population)
+-- -- VALUES ('dad', 'Dada', 50);
+-- SELECT * 
+-- FROM country
+-- ORDER BY Name ASC
+
+
+-- ----------UPDATE VALUES IN THE DATABASE
+-- USE world;
+-- UPDATE country
+-- SET Name = "Baba", population = 10
+-- WHERE code = "dad";
+
+-- SELECT * 
+-- FROM country
+-- ORDER BY Name ASC
+
+-- --------------DELETE
+-- DELETE 
+-- FROM country
+-- WHERE code = "dad"
+
+-- SELECT * 
+-- FROM country
+
+-- ---------------MIN MAX
+USE world;
+SELECT c.name, population) AS HighestPopulation
+FROM country c
+
+
+
+
+
+
+
 
 
 
